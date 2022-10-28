@@ -15,8 +15,31 @@ const { createApp } = Vue
 
 createApp({
     data() {
+
         return {
-            message: 'Hello Vue!'
+            message: 'Hello Vue!',
+            tasks: [
+                {
+                    text: 'svolgere esercizio',
+                    done: true
+                },
+                {
+                    text: 'fare spesa',
+                    done: false
+                },
+                {
+                    text: 'fare allenamento',
+                    done: true
+                },
+                {
+                    text: 'fare doccia',
+                    done: true
+                },
+                {
+                    text: 'preparare la cena',
+                    done: false
+                },
+            ]
         }
     }
 }).mount('#app')
