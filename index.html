@@ -8,6 +8,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1,
             shrink-to-fit=no">
 
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <!-- Bootstrap CSS v5.2.1 -->
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
@@ -19,31 +24,35 @@
 
     </head>
 
-    <body>
+    <body class="text-white">
+        <div class="container my-3">
+            <div id="app">
+                <div class="add_task mb-5 mt-5">
+                    <input type="text" placeholder="insert task">
+                    <button class="mx-2 px-2 rounded-pill border-0">Add Task</button>
+                </div>
 
-        <div id="app">
-            <div class="add_task">
+                <div class="task_list">
+                    <h3>Todo List</h3>
+                    <ul>
+                        <li v-for="(task, i) in tasks" :class="tasks[i].done ===
+                            true
+                            ? 'task_done' : '' ">
+                            {{task.text}}
+                            <i class="fa-solid fa-circle-xmark mx-2
+                                text-black" @click="removeTask"></i>
+                            <!-- lista -->
+                        </li>
+                    </ul>
+                </div>
 
             </div>
 
-            <div class="task_list">
-                <h3>Todo List</h3>
-                <ul>
-                    <li v-for="(task, i) in tasks" :class="tasks[i].done ===
-                        true
-                        ? 'task_done' : '' ">
-                        {{task.text}}
-                        <!-- lista -->
-                    </li>
-                </ul>
-            </div>
-
+            <script
+                src="https://cdn.jsdelivr.net/npm/vue@3.2.41/dist/vue.global.min.js
+                "></script>
+            <script src="./assets/js/main.js"></script>
         </div>
-
-        <script
-            src="https://cdn.jsdelivr.net/npm/vue@3.2.41/dist/vue.global.min.js
-            "></script>
-        <script src="./assets/js/main.js"></script>
     </body>
 
 </html>

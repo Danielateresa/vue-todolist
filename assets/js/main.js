@@ -39,6 +39,13 @@ createApp({
                 },
             ]
         }
+    },
+    //milestone 2
+    methods: {
+        removeTask(i) {
+            console.log('ho cliccato');
+            this.tasks.splice(i, 1)
+        }
     }
 }).mount('#app')
 
