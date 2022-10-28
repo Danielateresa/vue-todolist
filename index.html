@@ -28,13 +28,13 @@
         <div class="container mt-5 px-4 pt-4 pb-5 rounded-4 shadow">
             <div class="box m-auto">
                 <div id="app">
-                    <h2 class="text-center">ToDo List App</h2>
+                    <h1 class="text-center">To do List App</h1>
                     <div class="add_task mb-5 mt-5 text-center">
                         <input class="border-0" type="text"
                             placeholder="insert task"
                             v-model="newTask.text" @keyup.enter="addTask">
                         <!-- {{newTask.text}} -->
-                        <button class="bg-warning mx-2 px-2 rounded-pill
+                        <button class="bg-warning mx-2 px-3 rounded-pill
                             border-0"
                             @click.stop="addTask">Add Task</button>
                         <p class="text-warning" v-show="alert">Devi inserire
@@ -42,7 +42,7 @@
                     </div>
                     <hr>
                     <div class="task_list">
-                        <h3>Todo List</h3>
+                        <h3>To do List</h3>
                         <ul>
                             <li v-for="(task, i) in tasks" :class="tasks[i].done
                                 ===
