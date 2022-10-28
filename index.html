@@ -28,8 +28,10 @@
         <div class="container my-3">
             <div id="app">
                 <div class="add_task mb-5 mt-5">
-                    <input type="text" placeholder="insert task">
-                    <button class="mx-2 px-2 rounded-pill border-0">Add Task</button>
+                    <input type="text" placeholder="insert task"
+                        v-model="newTask">
+                    <button class="mx-2 px-2 rounded-pill border-0"
+                        @click="addTask">Add Task</button>
                 </div>
 
                 <div class="task_list">
@@ -40,7 +42,7 @@
                             ? 'task_done' : '' ">
                             {{task.text}}
                             <i class="fa-solid fa-circle-xmark mx-2
-                                text-black" @click="removeTask"></i>
+                                text-black" @click="removeTask(i)"></i>
                             <!-- lista -->
                         </li>
                     </ul>

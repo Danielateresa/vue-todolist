@@ -15,7 +15,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-
+            newTask: '',
             tasks: [
                 {
                     text: 'svolgere esercizio',
@@ -45,6 +45,10 @@ createApp({
         removeTask(i) {
             console.log('ho cliccato');
             this.tasks.splice(i, 1)
+        },
+        addTask() {
+            console.log('add');
+            this.tasks.push(this.newTask);
         }
     }
 }).mount('#app')
