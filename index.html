@@ -29,9 +29,10 @@
             <div id="app">
                 <div class="add_task mb-5 mt-5">
                     <input type="text" placeholder="insert task"
-                        v-model="newTask">
+                        v-model="newTask.text">
+                    {{newTask.text}}
                     <button class="mx-2 px-2 rounded-pill border-0"
-                        @click="addTask">Add Task</button>
+                        @click.stop="addTask">Add Task</button>
                 </div>
 
                 <div class="task_list">
