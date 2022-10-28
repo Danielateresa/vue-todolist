@@ -15,7 +15,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            newTask: { text: '', done: 'false' },
+            newTask: { text: '', done: false },
             tasks: [
                 {
                     text: 'svolgere esercizio',
@@ -50,7 +50,7 @@ createApp({
             console.log('add');
 
             this.tasks.push(this.newTask);
-            this.newTask = '';
+            this.newTask = { text: '', done: false };
             console.log(this.tasks);
         }
     }
