@@ -29,7 +29,7 @@
             <div id="app">
                 <div class="add_task mb-5 mt-5">
                     <input type="text" placeholder="insert task"
-                        v-model="newTask.text">
+                        v-model="newTask.text" @keyup.enter="addTask">
                     {{newTask.text}}
                     <button class="mx-2 px-2 rounded-pill border-0"
                         @click.stop="addTask">Add Task</button>
