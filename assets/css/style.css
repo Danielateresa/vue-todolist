@@ -7,3 +7,7 @@
 body {
     background-color: aqua;
 }
+
+.task_done {
+    text-decoration: line-through;
+}

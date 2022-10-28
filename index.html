@@ -21,10 +21,27 @@
 
     <body>
 
-        <div id="app">{{message}}</div>
+        <div id="app">
+            <div class="add_task">
+                <h3>New Task</h3>
 
+            </div>
 
-        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+            <div class="task_list">
+                <h3>Todo List</h3>
+                <ul>
+                    <li v-for="(task, i) in tasks">
+                        {{task.text}}
+                        <!-- lista -->
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/vue@3.2.41/dist/vue.global.min.js
+            "></script>
         <script src="./assets/js/main.js"></script>
     </body>
 
