@@ -23,14 +23,15 @@
 
         <div id="app">
             <div class="add_task">
-                <h3>New Task</h3>
 
             </div>
 
             <div class="task_list">
                 <h3>Todo List</h3>
                 <ul>
-                    <li v-for="(task, i) in tasks">
+                    <li v-for="(task, i) in tasks" :class="tasks[i].done ===
+                        true
+                        ? 'task_done' : '' ">
                         {{task.text}}
                         <!-- lista -->
                     </li>
