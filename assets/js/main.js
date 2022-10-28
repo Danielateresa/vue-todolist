@@ -15,6 +15,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            alert: false,
             newTask: { text: '', done: false },
             tasks: [
                 {
@@ -48,10 +49,16 @@ createApp({
         },
         addTask() {
             console.log('add');
+            if (this.newTask.text < 2) {
+                //console.log('no');
+                this.alert = true;
+            } else {
+                this.alert = false;
 
-            this.tasks.push(this.newTask);
-            this.newTask = { text: '', done: false };
-            console.log(this.tasks);
+                this.tasks.push(this.newTask);
+                this.newTask = { text: '', done: false };
+                console.log(this.tasks);
+            }
         },
         changeStatus(i) {
             if (this.tasks[i].done === false) {
