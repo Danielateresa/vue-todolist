@@ -4,8 +4,9 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: rgb(131, 131, 131);
+.container {
+    background-color: rgb(171, 171, 229);
+    width: 400px;
 }
 
 .task_done {
