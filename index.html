@@ -40,10 +40,12 @@
                     <ul>
                         <li v-for="(task, i) in tasks" :class="tasks[i].done ===
                             true
-                            ? 'task_done' : '' ">
+                            ? 'task_done' : '' " @click="changeStatus(i)">
                             {{task.text}}
                             <i class="fa-solid fa-circle-xmark mx-2
-                                text-black" @click="removeTask(i)"></i>
+                                text-black" @click="removeTask">
+                                <a class="text-white" href=""></a>
+                            </i>
                             <!-- lista -->
                         </li>
                     </ul>

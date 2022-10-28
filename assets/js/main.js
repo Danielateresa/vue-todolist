@@ -52,6 +52,14 @@ createApp({
             this.tasks.push(this.newTask);
             this.newTask = { text: '', done: false };
             console.log(this.tasks);
+        },
+        changeStatus(i) {
+            if (this.tasks[i].done === false) {
+                this.tasks[i].done = true;
+                console.log('ho cliccato nell if');
+            } else {
+                this.tasks[i].done = false;
+            }
         }
     }
 }).mount('#app')
